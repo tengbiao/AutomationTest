@@ -1,0 +1,118 @@
+主帐户:
+  type:id
+  value:lblMainMoney
+outSelect:
+  type:xpath
+  value:"//*[@id='ddlPayout']/span[2]/input[1]"
+inSelect:
+  type:xpath
+  value:"//*[@id='ddlPayin']/span[2]/input[1]"
+转帐金额:
+  type:id
+  value:txtMoney
+确认送出:
+  type:xpath
+  value:"//*[@id='form1']/div[3]/div[3]/div[2]/div/div[2]/div/div[4]/div[1]"
+点数全部转回主帐户:
+  type:xpath
+  value:"//*[@id='form1']/div[3]/div[3]/div[2]/div/div[2]/div/div[4]/div[2]"
+info_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//a[@class='layui-layer-btn0']"
+info_text:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"
+confirm_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1']"
+confirm_cancel:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn0']"
+mask:
+  type:id
+  value:mask
+loading:
+  type:className
+  value:layui-layer-loading2
+lblColorMoney:
+  type:id
+  value:lblColorMoney
+lblCNF:
+  type:id
+  value:lblCNF
+lblBYET:
+  type:id
+  value:lblBYET
+lblHB:
+  type:id
+  value:lblHB
+lblBNG:
+  type:id
+  value:lblBNG
+lblAE:
+  type:id
+  value:lblAE
+lblCMD:
+  type:id
+  value:lblCMD
+lblDJ:
+  type:id
+  value:lblDJ
+lblAG:
+  type:id
+  value:lblAG
+lblAB:
+  type:id
+  value:lblAB
+lblMGMoney:
+  type:id
+  value:lblMGMoney
+lblBBIN:
+  type:id
+  value:lblBBIN
+lblOG:
+  type:id
+  value:lblOG
+lblSC:
+  type:id
+  value:lblSC
+lblPT:
+  type:id
+  value:lblPT
+lblKU:
+  type:id
+  value:lblKU
+projectBox:
+  type:className
+  value:project_box
+btnRewind:
+  type:xpath
+  value:"//*[contains(@class,'rewind')]"
+rewindText:
+  type:xpath
+  value:"//*[@class='project']"
+outAccountPannel:
+  type:xpath
+  value:"//div[@class='panel combo-p'][1]"
+inAccountPannel:
+  type:xpath
+  value:"//div[@class='panel combo-p'][2]"
+outAccountOption:
+  type:xpath
+  value:"//div[@class='panel combo-p'][1]/div[1]/child::*"
+inAccountOption:
+  type:xpath
+  value:"//div[@class='panel combo-p'][2]/div[1]/child::*"
+btnUpdate:
+  type:className
+  value:update
+changeList:
+  type:xpath
+  value:"//*[@id='divMenu']/ul/li[2]/a"
+ddlType:
+  type:xpath
+  value:"//*[@id='contentBody_ddlType']"
+btnSearch:
+  type:id
+  value:contentBody_btnSearch
+  

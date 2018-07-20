@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="1" parallel="false" thread-count="1">
+    <test name="Test" preserve-order="true">
+        <classes>
+        	<class name="com.test.testcases.Login" />
+        <!--              
+            <class name="com.test.testcases.Shopping" />
+            <class name="com.test.testcases.Test1" />-->
+        </classes>
+    </test>
+    <test name="test1">  
+    <parameter name="browser" value="ff"/>  
+    <parameter name="nodeUrl" value="http://192.168.40.67:5555"/>  
+    <parameter name="webSite" value="http://www.baidu.com"/>  
+    <classes>  
+        <class name="driver.GridParallelTests"></class>  
+    </classes>  
+</test>  
+  
+<test name="test2">  
+    <parameter name="browser" value="chrome"/>  
+    <parameter name="nodeUrl" value="http://192.168.40.67:6666"/>  
+    <parameter name="webSite" value="http://www.baidu.com"/>  
+    <classes>  
+        <class name="driver.GridParallelTests"></class>  
+    </classes>  
+</test>  
+  
+<test name="test3">  
+    <parameter name="browser" value="ie"/>  
+    <parameter name="nodeUrl" value="http://192.168.40.24:5555"/>  
+    <parameter name="webSite" value="http://www.baidu.com"/>  
+    <classes>  
+        <class name="driver.GridParallelTests"></class>  
+    </classes>  
+</test>  
+</suite>

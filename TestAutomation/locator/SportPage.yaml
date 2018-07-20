@@ -1,0 +1,48 @@
+综合过关:
+  type:id
+  value:zhggspan
+等级:
+  type:className
+  value:levelName
+赔率:
+  type:xpath
+  value:"//*[@id='bq3769811']/span"
+投注金额:
+  type:id
+  value:betTouZhu
+关:
+  type:className
+  value:btn_cond
+开:
+  type:className
+  value:btn_cond on
+可赢金额:
+  type:id
+  value:betWin
+确认下注:
+  type:xpath
+  value:"//*[@id='divBetInfo']/div[4]/input[2]"
+帐号:
+  type:className
+  value:AccountName
+网球:
+  type:xpath
+  value:"//*[@id='ulLeftSport']/li[5]/div/span[1]"   
+确定:
+  type:xpath
+  value:"//*[@id='betBoxConfirm']"
+lblMenu:
+  type:xpath
+  value:"//*[@id='ulLeftSport']/li[2]/div/span[1]"
+lblGame:
+  type:xpath
+  value:"//*[@id='ulLeftSport']/li[2]/ul/li[2]/div/span[1]"
+plLink:
+  type:xpath
+  value:"//*[contains(@onclick,'ClickPL')]"
+BettingLimit:
+  type:id
+  value:BettingLimit
+btn_OK:
+  type:xpath
+  value:"//div[@class='Info']//*[contains(@class,'button_confirm')]"

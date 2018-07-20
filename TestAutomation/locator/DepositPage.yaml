@@ -1,0 +1,42 @@
+OnlineDeposit:
+  type:xpath
+  value:"//*[contains(@onclick,'OnlineDeposit')]"
+txtMoney:
+  type:id
+  value:txtMoney
+btnOnLineSendOut:
+  type:id
+  value:btnOnLineSendOut
+next:
+  type:id
+  value:iptNext
+QQWallet:
+  type:xpath
+  value:"//*[contains(@onclick,'QQWallet')]"
+WeChat_new:
+  type:xpath
+  value:"//*[contains(@onclick,'WeChat_new')]"
+Alipay:
+  type:xpath
+  value:"//*[contains(@onclick,'Alipay')]"
+Czzq_1:
+  type:xpath
+  value:"//*[contains(@onclick,'Czzq_1')]"
+OnlineFastPay:
+  type:xpath
+  value:"//*[contains(@onclick,'OnlineFastPay')]"
+QuickPassDeposit:
+  type:xpath
+  value:"//*[contains(@onclick,'QuickPassDeposit')]"
+CardPay:
+  type:xpath
+  value:"//*[contains(@onclick,'CardPay')]"
+TopMaintain:
+  type:className
+  value:top_maintain
+IntoDeposit:
+  type:className
+  value:threeboxes_bg_top
+TextPosition:
+  type:className
+  value:text_position

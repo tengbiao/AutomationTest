@@ -1,0 +1,54 @@
+btnRegister:
+  type:className
+  value:btn_freeRegister
+iframe:
+  type:xpath
+  value:"//*[@class='layui-layer-content']/iframe"
+txtAgent:
+  type:id
+  value:txtAgent
+txtAccounts:
+  type:id
+  value:txtAccounts
+txtTitle:
+  type:id
+  value:txtTitle
+txtPassword:
+  type:id
+  value:txtPassword
+txtPhoto:
+  type:id
+  value:txtPhoto
+btnSendcode:
+  type:xpath
+  value:"//*[@class='divMsg']/input[not(contains(@class,'hidden'))]"
+txtPhoneCode:
+  type:id
+  value:txtPhoneCode
+btnSend:
+  type:xpath
+  value:"//*[@id='form1']/div[3]/div[2]/div[3]/div[4]/a[2]"
+btnSubmit:
+  type:xpath
+  value:"//*[@id='form1']/div[3]/div[2]/input[3]"
+btn_deposit:
+  type:className
+  value:btn_deposit
+txtRemittanceName:
+  type:id
+  value:txtRemittanceName
+txtVoicePassword:
+  type:id
+  value:txtVoicePassword
+btn_SentOut:
+  type:xpath
+  value:"//*[@class='btn_SentOut tempBtn']"
+confirm_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1']"
+info_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//a[@class='layui-layer-btn0']"
+info_text:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"
