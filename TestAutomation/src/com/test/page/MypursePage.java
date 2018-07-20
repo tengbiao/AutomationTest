@@ -27,7 +27,7 @@ public class MypursePage extends Page {
 	 */
 	public void ReturnToMain() {
 		// 等待页面遮罩层隐藏后才能点击全部转回主账户按钮
-		waitMaskHide("mask");
+		waitMaskHide("mask"); 
 		List<WebElement> returnBtn = getElementsNoWait("btnRewind");
 		if (!returnBtn.equals(null) && returnBtn.size() > 0) {
 			getElement("点数全部转回主帐户").click();
