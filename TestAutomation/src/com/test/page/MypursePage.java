@@ -23,7 +23,7 @@ public class MypursePage extends Page {
 	}
 
 	/****
-	 * 全部转回主帐户
+	 * 全部转回主帐户  111
 	 */
 	public void ReturnToMain() {
 		// 等待页面遮罩层隐藏后才能点击全部转回主账户按钮
