@@ -2,6 +2,8 @@ package com.test.base;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -178,5 +180,20 @@ public class Page extends Locator{
 		}
 		Log.logInfo("找到了元素 [" +getElement(key)+ "]");
 	}
+	/***
+	 * 从元素属性值中正则提取字符串中的数字
+	 * @param element  
+	 * @param s 
+	 * @return
+	 */
+   public String  getAttributeValue(String s) {
+	   String regEx="[^0-9]"; 
+	   Pattern p = Pattern.compile(regEx);  
+	   Matcher m = p.matcher(s);  
+	   return m.replaceAll("").trim();
+}
+		
+	
+	
 
 }

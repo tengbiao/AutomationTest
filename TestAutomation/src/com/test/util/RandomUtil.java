@@ -1,5 +1,7 @@
 package com.test.util;
 
+import java.util.Random;
+
 public class RandomUtil {
 	
 	/**
@@ -46,7 +48,7 @@ public class RandomUtil {
 	 * @param length
 	 * @return
 	 */
-	public String getRandomString(int length){
+	public  String  getRandomString(int length){
 		StringBuffer sb = new StringBuffer();
 		int len = number.length();
 		for (int i = 0; i < length; i++) {
@@ -54,6 +56,18 @@ public class RandomUtil {
 		}
 		return sb.toString();
 	}
+	/**
+	 * 在指定区间内得到一个随机数值
+	 * @param min
+	 * @param max
+	 * @return
+	 */
+	public static int getRandom(int min,int max) {
+		Random random=new Random();
+		int rand=random.nextInt(max)%(max-min+1)+min;
+		return rand;
+	}
+	
 	public static void main(String[] args) {
 		RandomUtil ru = new RandomUtil();
 		for (int i = 0; i < 10; i++) {

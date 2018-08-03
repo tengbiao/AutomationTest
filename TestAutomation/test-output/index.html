@@ -2,9 +2,10 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -23,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--658988437\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1925114825\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.testcases.Register" hash-for-method="TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...)">TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.testcases.Withdraw" hash-for-method="testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...)">testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,64 +117,35 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.test.testcases.Register</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.test.testcases.Withdraw</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...)">
-                  </a> <!-- TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...) -->
-                  <span class="method-name">TestSubmitRegister</span>
-                  <span class="parameters">({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, username=test1})</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.test.page.RegisterPage.SubmitRegister(RegisterPage.java:51)
-	at com.test.testcases.Register.TestSubmitRegister(Register.java:19)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
+                  <a name="testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...)">
+                  </a> <!-- testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...) -->
+                  <span class="method-name">testsubmitUnionCard</span>
+                  <span class="parameters">({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSort/index.aspx, money=10, url_formal=https://ts.kaz11.net/SiteSort/index.aspx, url=http://119.81.201.156:6026/SiteSort/index.aspx, url_test=http://119.81.201.156:6026/SiteSort/index.aspx})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--658988437\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1925114825\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
+&lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.testcases.Register&quot;/&gt;
+      &lt;class name=&quot;com.test.testcases.Withdraw&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -215,14 +187,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestSubmitRegister')
-data.setCell(0, 2, 'com.test.testcases.Register')
-data.setCell(0, 3, 22354);
+data.setCell(0, 1, 'testsubmitUnionCard')
+data.setCell(0, 2, 'com.test.testcases.Withdraw')
+data.setCell(0, 3, 10683);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -234,24 +206,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...)</span>
+              <span class="reporter-method-name">testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">2018-07-20 11:44:26 : 1.´ò¿ª²âÊÔµØÖ·£ºhttp://119.81.201.156:6026/SiteSort/index.aspx</span>
-                <span class="reporter-method-output">2018-07-20 11:44:27 : 1.µã»÷Ãâ·Ñ×¢²á</span>
-                <span class="reporter-method-output">2018-07-20 11:44:27 : 2.ÊäÈëÕÊºÅ£º1406382486</span>
-                <span class="reporter-method-output">2018-07-20 11:44:27 : 3.ÊäÈëêÇ³Æ£º92905</span>
-                <span class="reporter-method-output">2018-07-20 11:44:27 : 4.ÊäÈëÃÜÂë£ºdd1234</span>
-                <span class="reporter-method-output">2018-07-20 11:44:27 : 4.ÊäÈëÊÖ»úºÅÂë£º18928234207</span>
-                <span class="reporter-method-output">2018-07-20 11:44:28 : 5.·¢ËÍÑéÖ¤Âë</span>
-                <span class="reporter-method-output">2018-07-20 11:44:28 : 6.ÊäÈëÑéÖ¤Âë:7788</span>
-                <span class="reporter-method-output">2018-07-20 11:44:28 : 7.ËÍ³öÑéÖ¤Âë</span>
-                <span class="reporter-method-output">2018-07-20 11:44:28 : 8.Ìá½»×¢²á</span>
-                <span class="reporter-method-output">2018-07-20 11:44:33 : ----------ÕÊºÅ£º1406382486×¢²á³É¹¦£¡-------</span>
-                <span class="reporter-method-output">2018-07-20 11:44:34 : 9.µã»÷ÎÒÒª´æ¿î</span>
-                <span class="reporter-method-output">2018-07-20 11:44:35 : 10.ÊäÈë»§Ãû:½ç´úÉ½</span>
-                <span class="reporter-method-output">2018-07-20 11:44:35 : 11.ÊäÈëÌá¿îÃÜÂë:dd4321</span>
-                <span class="reporter-method-output">2018-07-20 11:44:35 : 12.µã»÷È·ÈÏËÍ³ö</span>
-                <span class="reporter-method-output">2018-07-20 11:44:45 : By.xpath: //*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1'] is not exist until 20</span>
+                <span class="reporter-method-output">2018-08-03 18:24:19 : 1.æ‰“å¼€æµ‹è¯•åœ°å€ï¼šhttp://119.81.201.156:6026/SiteSort/index.aspx</span>
+                <span class="reporter-method-output">2018-08-03 18:24:19 : 2.è¾“å…¥è´¦å·ï¼šTB1234,å¯†ç ï¼šdd1234</span>
+                <span class="reporter-method-output">2018-08-03 18:24:20 : 3.ç‚¹å‡»ç™»å…¥</span>
+                <span class="reporter-method-output">2018-08-03 18:24:22 : TB1234ç™»å½•æˆåŠŸ</span>
+                <span class="reporter-method-output">2018-08-03 18:24:22 : ç‚¹å‡»ææ¬¾ä¸“åŒº</span>
+                <span class="reporter-method-output">2018-08-03 18:24:24 : ä¼šå‘˜ä¸­å¿ƒ--ææ¬¾ä¸“åŒº</span>
+                <span class="reporter-method-output">2018-08-03 18:24:24 : é€‰æ‹©ã€é“¶è¡Œå¡å·ã€‘ææ¬¾</span>
+                <span class="reporter-method-output">2018-08-03 18:24:24 : é“¶è¡Œå¡å°¾å·ä¸ºã€2338ã€‘</span>
+                <span class="reporter-method-output">2018-08-03 18:24:25 : 1</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,20 +234,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.testcases.Register</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.testcases.Withdraw</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TestSubmitRegister({password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, use...)</span>
-                <span class="method-start">5170 ms</span>
+                <span class="method-name">testsubmitUnionCard({username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSo...)</span>
+                <span class="method-start">6395 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">27536 ms</span>
+                <span class="method-start">17085 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

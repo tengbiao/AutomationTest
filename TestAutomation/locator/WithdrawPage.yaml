@@ -1,0 +1,36 @@
+UnionCard:
+  type:id
+  value:UnionCard
+addBank:
+  type:xpath
+  value:"//*[@class='increase_t']"
+card:
+  type:xpath
+  value:"//*[@class='bkcard_t']"
+cardNum:
+  type:xpath
+  value:"//*[@class='number_t']"
+txtMoney:
+  type:id
+  value:txtMoney
+txtJymm:
+  type:id
+  value:contentBody_txtJymm
+btnSend:
+  type:id
+  value:btnSend
+deleteBank:
+  type:xpath
+  value:"//*[@class='btn_bankFoo']"
+bankForget:
+  type:xpath
+  value:"//*[@class='icon_bankForget']"
+AstroPay:
+  type:id
+  value:AstroPay
+info_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//a[@class='layui-layer-btn0']"
+info_text:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"

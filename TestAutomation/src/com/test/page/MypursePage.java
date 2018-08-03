@@ -1,6 +1,8 @@
 package com.test.page;
 
 import java.util.List;
+import java.util.UUID;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +25,7 @@ public class MypursePage extends Page {
 	}
 
 	/****
-	 * 全部转回主帐户  111
+	 * 全部转回主帐户
 	 */
 	public void ReturnToMain() {
 		// 等待页面遮罩层隐藏后才能点击全部转回主账户按钮
@@ -57,6 +59,9 @@ public class MypursePage extends Page {
 		getElement(key).click();
 		waitElementToBeDisplayed(
 				key.equals("outSelect") ? getElement("outAccountPannel") : getElement("inAccountPannel"));
+		
+		
+		
 	}
 
 	private void clickPlatformSelectHide(String key) {

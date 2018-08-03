@@ -1,160 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[2018-07-20 11:44:26 : 1.´ò¿ª²âÊÔµØÖ·£ºhttp://119.81.201.156:6026/SiteSort/index.aspx]]>
+      <![CDATA[2018-08-03 18:24:19 : 1.æ‰“å¼€æµ‹è¯•åœ°å€ï¼šhttp://119.81.201.156:6026/SiteSort/index.aspx]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:27 : 1.µã»÷Ãâ·Ñ×¢²á]]>
+      <![CDATA[2018-08-03 18:24:19 : 2.è¾“å…¥è´¦å·ï¼šTB1234,å¯†ç ï¼šdd1234]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:27 : 2.ÊäÈëÕÊºÅ£º1406382486]]>
+      <![CDATA[2018-08-03 18:24:20 : 3.ç‚¹å‡»ç™»å…¥]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:27 : 3.ÊäÈëêÇ³Æ£º92905]]>
+      <![CDATA[2018-08-03 18:24:22 : TB1234ç™»å½•æˆåŠŸ]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:27 : 4.ÊäÈëÃÜÂë£ºdd1234]]>
+      <![CDATA[2018-08-03 18:24:22 : ç‚¹å‡»ææ¬¾ä¸“åŒº]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:27 : 4.ÊäÈëÊÖ»úºÅÂë£º18928234207]]>
+      <![CDATA[2018-08-03 18:24:24 : ä¼šå‘˜ä¸­å¿ƒ--ææ¬¾ä¸“åŒº]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:28 : 5.·¢ËÍÑéÖ¤Âë]]>
+      <![CDATA[2018-08-03 18:24:24 : é€‰æ‹©ã€é“¶è¡Œå¡å·ã€‘ææ¬¾]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:28 : 6.ÊäÈëÑéÖ¤Âë:7788]]>
+      <![CDATA[2018-08-03 18:24:24 : é“¶è¡Œå¡å°¾å·ä¸ºã€2338ã€‘]]>
     </line>
     <line>
-      <![CDATA[2018-07-20 11:44:28 : 7.ËÍ³öÑéÖ¤Âë]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:28 : 8.Ìá½»×¢²á]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:33 : ----------ÕÊºÅ£º1406382486×¢²á³É¹¦£¡-------]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:34 : 9.µã»÷ÎÒÒª´æ¿î]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:35 : 10.ÊäÈë»§Ãû:½ç´úÉ½]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:35 : 11.ÊäÈëÌá¿îÃÜÂë:dd4321]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:35 : 12.µã»÷È·ÈÏËÍ³ö]]>
-    </line>
-    <line>
-      <![CDATA[2018-07-20 11:44:45 : By.xpath: //*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1'] is not exist until 20]]>
+      <![CDATA[2018-08-03 18:24:25 : 1]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27545" started-at="2018-07-20T03:44:17Z" finished-at="2018-07-20T03:44:45Z">
+  <suite name="Default suite" duration-ms="17121" started-at="2018-08-03T10:24:08Z" finished-at="2018-08-03T10:24:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27545" started-at="2018-07-20T03:44:17Z" finished-at="2018-07-20T03:44:45Z">
-      <class name="com.test.testcases.Register">
-        <test-method status="PASS" signature="initialDriver()[pri:0, instance:com.test.testcases.Register@5f375618]" name="initialDriver" is-config="true" duration-ms="5140" started-at="2018-07-20T11:44:17Z" finished-at="2018-07-20T11:44:23Z">
+    <test name="Default test" duration-ms="17121" started-at="2018-08-03T10:24:08Z" finished-at="2018-08-03T10:24:25Z">
+      <class name="com.test.testcases.Withdraw">
+        <test-method status="PASS" signature="initialDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="initialDriver" is-config="true" duration-ms="6357" started-at="2018-08-03T18:24:08Z" finished-at="2018-08-03T18:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialDriver -->
-        <test-method status="FAIL" signature="TestSubmitRegister(java.util.Map)[pri:0, instance:com.test.testcases.Register@5f375618]" name="TestSubmitRegister" duration-ms="22354" started-at="2018-07-20T11:44:23Z" data-provider="providerMethod" finished-at="2018-07-20T11:44:45Z">
+        <test-method status="PASS" signature="testsubmitUnionCard(java.util.Map)[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="testsubmitUnionCard" duration-ms="10683" started-at="2018-08-03T18:24:14Z" data-provider="providerMethod" finished-at="2018-08-03T18:24:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, username=test1}]]>
+                <![CDATA[{username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSort/index.aspx, money=10, url_formal=https://ts.kaz11.net/SiteSort/index.aspx, url=http://119.81.201.156:6026/SiteSort/index.aspx, url_test=http://119.81.201.156:6026/SiteSort/index.aspx}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.test.page.RegisterPage.SubmitRegister(RegisterPage.java:51)
-	at com.test.testcases.Register.TestSubmitRegister(Register.java:19)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
-              <![CDATA[2018-07-20 11:44:26 : 1.´ò¿ª²âÊÔµØÖ·£ºhttp://119.81.201.156:6026/SiteSort/index.aspx]]>
+              <![CDATA[2018-08-03 18:24:19 : 1.æ‰“å¼€æµ‹è¯•åœ°å€ï¼šhttp://119.81.201.156:6026/SiteSort/index.aspx]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:27 : 1.µã»÷Ãâ·Ñ×¢²á]]>
+              <![CDATA[2018-08-03 18:24:19 : 2.è¾“å…¥è´¦å·ï¼šTB1234,å¯†ç ï¼šdd1234]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:27 : 2.ÊäÈëÕÊºÅ£º1406382486]]>
+              <![CDATA[2018-08-03 18:24:20 : 3.ç‚¹å‡»ç™»å…¥]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:27 : 3.ÊäÈëêÇ³Æ£º92905]]>
+              <![CDATA[2018-08-03 18:24:22 : TB1234ç™»å½•æˆåŠŸ]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:27 : 4.ÊäÈëÃÜÂë£ºdd1234]]>
+              <![CDATA[2018-08-03 18:24:22 : ç‚¹å‡»ææ¬¾ä¸“åŒº]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:27 : 4.ÊäÈëÊÖ»úºÅÂë£º18928234207]]>
+              <![CDATA[2018-08-03 18:24:24 : ä¼šå‘˜ä¸­å¿ƒ--ææ¬¾ä¸“åŒº]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:28 : 5.·¢ËÍÑéÖ¤Âë]]>
+              <![CDATA[2018-08-03 18:24:24 : é€‰æ‹©ã€é“¶è¡Œå¡å·ã€‘ææ¬¾]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:28 : 6.ÊäÈëÑéÖ¤Âë:7788]]>
+              <![CDATA[2018-08-03 18:24:24 : é“¶è¡Œå¡å°¾å·ä¸ºã€2338ã€‘]]>
             </line>
             <line>
-              <![CDATA[2018-07-20 11:44:28 : 7.ËÍ³öÑéÖ¤Âë]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:28 : 8.Ìá½»×¢²á]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:33 : ----------ÕÊºÅ£º1406382486×¢²á³É¹¦£¡-------]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:34 : 9.µã»÷ÎÒÒª´æ¿î]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:35 : 10.ÊäÈë»§Ãû:½ç´úÉ½]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:35 : 11.ÊäÈëÌá¿îÃÜÂë:dd4321]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:35 : 12.µã»÷È·ÈÏËÍ³ö]]>
-            </line>
-            <line>
-              <![CDATA[2018-07-20 11:44:45 : By.xpath: //*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1'] is not exist until 20]]>
+              <![CDATA[2018-08-03 18:24:25 : 1]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TestSubmitRegister -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.test.testcases.Register@5f375618]" name="closeDriver" is-config="true" duration-ms="0" started-at="2018-07-20T11:44:45Z" finished-at="2018-07-20T11:44:45Z">
+        </test-method> <!-- testsubmitUnionCard -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="closeDriver" is-config="true" duration-ms="1" started-at="2018-08-03T18:24:25Z" finished-at="2018-08-03T18:24:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- com.test.testcases.Register -->
+      </class> <!-- com.test.testcases.Withdraw -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

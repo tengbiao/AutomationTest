@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 20 11:44:17 CST 2018</td>
+<td>Started on:</td><td>Fri Aug 03 18:24:08 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27545 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17121 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,95 +67,33 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.testcases.Register.TestSubmitRegister()'><b>TestSubmitRegister</b><br>Test class: com.test.testcases.Register<br>Parameters: {password=123456, money=10, inputValue=test, url=http://119.81.201.156:6026/SiteSort/index.aspx, username=test1}<br/>
-<a href="#Output-1621002296" onClick='toggleBox("Output-1621002296", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.test.testcases.Withdraw.testsubmitUnionCard()'><b>testsubmitUnionCard</b><br>Test class: com.test.testcases.Withdraw<br>Parameters: {username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSort/index.aspx, money=10, url_formal=https://ts.kaz11.net/SiteSort/index.aspx, url=http://119.81.201.156:6026/SiteSort/index.aspx, url_test=http://119.81.201.156:6026/SiteSort/index.aspx}<br/>
+<a href="#Output-1551629761" onClick='toggleBox("Output-1551629761", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1621002296" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1621002296">
-2018-07-20 11:44:26 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx<br/>
-2018-07-20 11:44:27 : 1.点击免费注册<br/>
-2018-07-20 11:44:27 : 2.输入帐号：1406382486<br/>
-2018-07-20 11:44:27 : 3.输入昵称：92905<br/>
-2018-07-20 11:44:27 : 4.输入密码：dd1234<br/>
-2018-07-20 11:44:27 : 4.输入手机号码：18928234207<br/>
-2018-07-20 11:44:28 : 5.发送验证码<br/>
-2018-07-20 11:44:28 : 6.输入验证码:7788<br/>
-2018-07-20 11:44:28 : 7.送出验证码<br/>
-2018-07-20 11:44:28 : 8.提交注册<br/>
-2018-07-20 11:44:33 : ----------帐号：1406382486注册成功！-------<br/>
-2018-07-20 11:44:34 : 9.点击我要存款<br/>
-2018-07-20 11:44:35 : 10.输入户名:界代山<br/>
-2018-07-20 11:44:35 : 11.输入提款密码:dd4321<br/>
-2018-07-20 11:44:35 : 12.点击确认送出<br/>
-2018-07-20 11:44:45 : By.xpath: //*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1'] is not exist until 20<br/>
+<a href="#Output-1551629761" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1551629761">
+2018-08-03 18:24:19 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx<br/>
+2018-08-03 18:24:19 : 2.输入账号：TB1234,密码：dd1234<br/>
+2018-08-03 18:24:20 : 3.点击登入<br/>
+2018-08-03 18:24:22 : TB1234登录成功<br/>
+2018-08-03 18:24:22 : 点击提款专区<br/>
+2018-08-03 18:24:24 : 会员中心--提款专区<br/>
+2018-08-03 18:24:24 : 选择【银行卡号】提款<br/>
+2018-08-03 18:24:24 : 银行卡尾号为【2338】<br/>
+2018-08-03 18:24:25 : 1<br/>
 </div>
 </td>
-<td><div><pre>java.lang.NullPointerException
-	at com.test.page.RegisterPage.SubmitRegister(RegisterPage.java:51)
-	at com.test.testcases.Register.TestSubmitRegister(Register.java:19)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1621002296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1621002296'><pre>java.lang.NullPointerException
-	at com.test.page.RegisterPage.SubmitRegister(RegisterPage.java:51)
-	at com.test.testcases.Register.TestSubmitRegister(Register.java:19)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>22</td>
-<td>com.test.testcases.Register@5f375618</td></tr>
+<td></td>
+<td>10</td>
+<td>com.test.testcases.Withdraw@467aecef</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,3 +1,9 @@
+info_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//a[@class='layui-layer-btn0']"
+info_text:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"
 OnlineDeposit:
   type:xpath
   value:"//*[contains(@onclick,'OnlineDeposit')]"
@@ -7,30 +13,144 @@ txtMoney:
 btnOnLineSendOut:
   type:id
   value:btnOnLineSendOut
-next:
+btnOnLineSendOut:
+  type:id
+  value:btnOnLineSendOut
+selectBank:
+  type:xpath
+  value:"//*[@id='divBankName']/div"
+iptNext:
   type:id
   value:iptNext
 QQWallet:
   type:xpath
   value:"//*[contains(@onclick,'QQWallet')]"
+btn_QQWalletSub:
+  type:id
+  value:btn_QQWalletSub
 WeChat_new:
   type:xpath
   value:"//*[contains(@onclick,'WeChat_new')]"
+weChatAuto:
+  type:id
+  value:weChatAuto
+btn_onlineWechatSub:
+  type:id
+  value:btn_onlineWechatSub
+weChatMan:
+  type:id
+  value:weChatMan
+weChatManMoney:
+  type:id
+  value:weChatManMoney
+btn_MagSure:
+  type:id
+  value:btn_MagSure
+weChatManOut:
+  type:id
+  value:weChatManOut
 Alipay:
   type:xpath
   value:"//*[contains(@onclick,'Alipay')]"
+alipayAuto:
+  type:id
+  value:alipayAuto
+okAlipaySubmit:
+  type:id
+  value:okAlipaySubmit
+tijiaoBtn:
+  type:id
+  value:tijiaoBtn
+alipayMan:
+  type:id
+  value:alipayMan
+btnNext:
+  type:id
+  value:btnNext
+selectOptions:
+  type:id
+  value:selectOptions
+txtAlipayManMoney:
+  type:id
+  value:txtAlipayManMoney
+lastFiveNo:
+  type:id
+  value:lastFiveNo
+btnAlipayManOut:
+  type:id
+  value:btnAlipayManOut
+alipaySubmit:
+  type:xpath
+  value:"//*[@onclick='fnHyzxSubmit()']"
+alipayManOK:
+  type:xpath
+  value:"//*[@onclick='fnHyzxOK()']"
+apipayManSuccessMsg:
+  type:xpath
+  value:"//*[@id='DivDialogB']//*[@class='popup_content']"
+aliBank:
+  type:id
+  value:aliBank
+ddlBanks:
+  type:id
+  value:contentBody_ddlBanks
+txtMoneyapiBank:
+  type:id
+  value:contentBody_txtMoneyapiBank
+btn_MagSureNew:
+  type:id
+  value:contentBody_btn_MagSureNew
+btnapiBankManOut:
+  type:id
+  value:btnapiBankManOut
 Czzq_1:
   type:xpath
   value:"//*[contains(@onclick,'Czzq_1')]"
+contentBody_txtMoney:
+  type:id
+  value:contentBody_txtMoney
+btnField_1:
+  type:id
+  value:btnField_1
 OnlineFastPay:
   type:xpath
   value:"//*[contains(@onclick,'OnlineFastPay')]"
+btn_onlineFastSubmit:
+  type:id
+  value:btn_onlineFastSub
 QuickPassDeposit:
   type:xpath
   value:"//*[contains(@onclick,'QuickPassDeposit')]"
+btn_QuickPassSub:
+  type:id
+  value:btn_QuickPassSub
+divUnion:
+  type:id
+  value:divUnion
+divJd:
+  type:id
+  value:divJd
+divBaidu:
+  type:id
+  value:divBaidu
 CardPay:
   type:xpath
   value:"//*[contains(@onclick,'CardPay')]"
+txtCardNum:
+  type:id
+  value:txtCardNum
+txtCardCode:
+  type:id
+  value:txtCardCode
+selExpMonth:
+  type:id
+  value:selExpMonth
+selExpYear:
+  type:id
+  value:selExpYear
+btnCardSubmit:
+  type:id
+  value:btnCardSubmit
 TopMaintain:
   type:className
   value:top_maintain

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
 <common></common>
-<testOnlineDeposit>
+<testsubmitUnionCard>
     <username_test>TB1234</username_test>
     <username_pre>F663</username_pre>
     <password>dd1234</password>
-</testOnlineDeposit>
+    <Jymm>dd4321</Jymm>>
+</testsubmitUnionCard>
 </data>
