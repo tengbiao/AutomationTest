@@ -15,40 +15,27 @@ public class DepositPage extends Page {
 		super(driver);
 	}
 
-	/**
-	 * 分割得到的存款区间
-	 * 
-	 * @param element
-	 * @param attr
-	 * @return
-	 */
-	private String GetMinMoney(WebElement element, String attr) {
-		String attrValue = element.getAttribute(attr);
-		return attrValue.split("-")[0];
-	}
 
 	/**
 	 * 在线网银
 	 * 
 	 * @throws InterruptedException
 	 */
-	public void onlineDeposit() throws InterruptedException {
+	public void onlineDeposit(){
 		// Log.logInfo("onlineDeposit");
-		if (isExist(getElementNoWait("OnlineDeposit"))) {
-			// 进入在线支付
-			Log.logInfo("---------进入在线支付-------------");
-			getElement("OnlineDeposit").click();
-			// 获取最低存款金额
-			String online = GetMinMoney(getElement("txtMoney"), "placeholder");
-			// 输入存款金额
-			getElement("txtMoney").sendKeys(online);
-			Log.logInfo("输入金额：" + online);
-			// 点击确认送出
-			getElement("btnOnLineSendOut").click();
-			Log.logInfo("点击确认送出");
-			Thread.sleep(3000);
-			Log.logInfo("等待3s");
-			// 得到所有开放银行
+		// if (isExist(getElementNoWait("OnlineDeposit"))) {
+		// 进入在线支付
+		Log.logInfo("---------进入在线支付-------------");
+		// getElement("OnlineDeposit").click();
+		// 获取最低存款金额
+		String online = GetMinMoney(getElement("txtMoney"), "placeholder");
+		// 输入存款金额
+		getElement("txtMoney").sendKeys(online);
+		Log.logInfo("输入金额：" + online);
+		// 点击确认送出
+		getElement("btnOnLineSendOut").click();
+		Log.logInfo("点击确认送出");
+		if (!isExist("InfoLoading", "info_ok")) {
 			List<WebElement> banks = getElements("selectBank");
 			int index = RandomUtil.getRandom(0, banks.size());
 			Log.logInfo("选择银行：" + banks.get(index).getText());
@@ -56,121 +43,118 @@ public class DepositPage extends Page {
 			banks.get(index).click();
 			Log.logInfo("点击下一步");
 			getElement("iptNext").click();
-
+			if (!isExist("InfoLoading", "info_ok")) {
+				Log.logInfo("成功跳转到第三方: " + driver.getCurrentUrl());
+			} else {
+				Log.logInfo("在线支付下一步提交失败！提示【" + getElement("info_text").getText() + "】");
+				getElement("info_ok").click();
+			}
+			// return;
 		} else {
-			Log.logInfo(getElementNoWait("TextPosition").getText() + "维护中！");
+			Log.logInfo("在线支付确认送出失败！提示【" + getElement("info_text").getText() + "】");
+			getElement("info_ok").click();
 		}
-
 	}
 
 	/**
 	 * QQ扫码支付
+	 * 
+	 * 
 	 */
 	public void qqWallet() {
 		// Log.logInfo("qqWallet");
-		if (isExist(getElementNoWait("QQWallet"))) {
-			// 进入QQ扫码支付
-			Log.logInfo("---------进入QQ扫码支付-------------");
-			getElement("QQWallet").click();
-			// 输入金额
-			String qq = GetMinMoney(getElement("txtMoney"), "placeholder");
-			getElement("txtMoney").sendKeys(qq);
-			Log.logInfo("输入金额：" + qq);
-			// 点击确认送出
-			getElement("btn_QQWalletSub").click();
-			Log.logInfo("点击确认送出");
-			if (isExist(getElement("info_ok"))) {
+		// if (isExist(getElementNoWait("QQWallet"))) {
+		// 进入QQ扫码支付
+		Log.logInfo("---------进入QQ扫码支付-------------");
+		// getElement("QQWallet").click();
+		// 输入金额
+		String qq = GetMinMoney(getElement("txtMoney"), "placeholder");
+		getElement("txtMoney").sendKeys(qq);
+		Log.logInfo("输入金额：" + qq);
+		// 点击确认送出
+		getElement("btn_QQWalletSub").click();
+		Log.logInfo("点击确认送出");
+		if (!isExist("InfoLoading", "info_ok")) {
+			assertEquals("二维码页面", driver.getTitle());
+			Log.logInfo("QQ扫码支付--提交成功！");
+			if (isExist(getElement("tijiaoBtn"))) {
+				getElement("tijiaoBtn").click();
+				Log.logInfo("点击重新提交");
+				if (!isExist("InfoLoading", "info_ok"))
+					Log.logInfo("QQ扫码支付--重新提交成功！");
+			} else {
 				// 判断提示框是否存在，输出提示信息
+				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
+				getElement("info_ok").click();
+			}
+		} else {
+			// 判断提示框是否存在，输出提示信息
+			Log.logInfo("提示【" + getElement("info_text").getText() + "】");
+			getElement("info_ok").click();
+		}
+	}
+
+	/**
+	 * 微信支付之九卅微信、在线微信
+	 * 
+	 */
+	public void weChat(){
+		// 进入微信支付
+		Log.logInfo("---------进入微信支付-------------");
+		String domain = driver.getCurrentUrl();
+		domain = domain.substring(0, domain.indexOf("/Aspx"));
+		if (isExist(getElementNoWait("weChatAuto"))) {
+			// 输入金额
+			String onlineWechat = GetMinMoney(getElement("txtMoney"), "placeholder");
+			getElement("txtMoney").sendKeys(onlineWechat + "0");
+			Log.logInfo("输入金额：" + onlineWechat + "0");
+			// 点击确认送出
+			getElement("btn_onlineWechatSub").click();
+			Log.logInfo("点击确认送出");
+			if (isExist("InfoLoading", "info_ok")) {
 				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
 				getElement("info_ok").click();
 			} else {
 				assertEquals("二维码页面", driver.getTitle());
-				if (isExist(getElement("tijiaoBtn"))) {
-					getElement("tijiaoBtn").click();
-					Log.logInfo("重新提交");
-					if (isExist(getElement("info_ok"))) {
-						// 判断提示框是否存在，输出提示信息
-						Log.logInfo("提示【" + getElement("info_text").getText() + "】");
-						getElement("info_ok").click();
-					}
-				}
-			}
-		} else {
-			Log.logInfo(getElementNoWait("TextPosition").getText() + "维护中！");
-		}
-	}
-
-	/**
-	 * 微信支付之在线微信
-	 */
-	public void onlineWeChat() {
-		if (isExist(getElementNoWait("WeChat_new"))) {
-			// 进入微信支付
-			Log.logInfo("---------进入微信支付-------------");
-			getElement("WeChat_new").click();
-			if (isExist(getElement("weChatAuto"))) {
-				// 输入金额
-				String onlineWechat = GetMinMoney(getElement("txtMoney"), "placeholder");
-				getElement("txtMoney").sendKeys(onlineWechat + "0");
-				Log.logInfo("输入金额：" + onlineWechat + "0");
-				// 点击确认送出
-				getElement("btn_onlineWechatSub").click();
-				Log.logInfo("点击确认送出");
-				if (isExist(getElement("info_ok"))) {
-					Log.logInfo("提示【" + getElement("info_text").getText() + "】");
-					getElement("info_ok").click();
-				} else {
-					assertEquals("二维码页面", driver.getTitle());
-					if (isExist(getElement("tijiaoBtn"))) {
-						getElement("tijiaoBtn").click();
-						Log.logInfo("重新提交");
-						if (isExist(getElement("info_ok"))) {
-							// 判断提示框是否存在，输出提示信息
-							Log.logInfo("提示【" + getElement("info_text").getText() + "】");
-							getElement("info_ok").click();
-						}
-					}
-				}
-			} else {
-				Log.logInfo("在线微信不开放！");
-			}
-
-		} else {
-			Log.logInfo(getElementNoWait("TextPosition").getText() + "维护中！");
-		}
-	}
-
-	/**
-	 * 微信支付之九卅微信
-	 */
-	public void weChatMan() {
-		if (isExist(getElementNoWait("WeChat_new"))) {
-			// 进入微信支付
-			Log.logInfo("---------进入微信支付-------------");
-			getElement("WeChat_new").click();
-			// 点击九卅微信
-			if (isExist(getElement("weChatMan"))) {
-				getElement("weChatMan").click();
-				Log.logInfo("点击九卅微信");
-				// 输入金额
-				String weChatManMoney = GetMinMoney(getElement("weChatManMoney"), "placeholder");
-				getElement("weChatManMoney").sendKeys(weChatManMoney);
-				Log.logInfo("输入金额：" + weChatManMoney);
-				// 点击确认送出
-				getElement("weChatManOut").click();
-				Log.logInfo("点击确认送出");
-				getElement("btn_MagSure").click();
-				if (isExist(getElement("info_ok"))) {
+				getElement("tijiaoBtn").click();
+				Log.logInfo("重新提交");
+				if (isExist("InfoLoading", "info_ok")) {
 					// 判断提示框是否存在，输出提示信息
 					Log.logInfo("提示【" + getElement("info_text").getText() + "】");
 					getElement("info_ok").click();
+				} else {
+					Log.logInfo("在线微信--重新提交成功！");
 				}
-			} else {
-				Log.logInfo("九卅微信不开放！");
 			}
-
 		} else {
-			Log.logInfo(getElementNoWait("TextPosition").getText() + "维护中！");
+			Log.logInfo("在线微信不开放！");
+		}
+		// 重新进入微信支付页面
+		driver.get(domain + "/Aspx/WeChat_new.aspx");
+		Log.logInfo("------重新进入微信支付----");
+		//Thread.sleep(5000);
+		// 点击九卅微信
+		if (isExist(getElementNoWait("weChatMan"))) {
+			getElementNoWait("weChatMan").click();
+			Log.logInfo("选择九卅微信");
+			// 输入金额
+			String weChatManMoney = GetMinMoney(getElement("weChatManMoney"), "placeholder");
+			getElement("weChatManMoney").sendKeys(weChatManMoney);
+			Log.logInfo("输入金额：" + weChatManMoney);
+			// 点击确认送出
+			getElement("weChatManOut").click();
+			Log.logInfo("点击确认送出");
+			if (!isExist("InfoLoading", "info_ok")) {
+				getElement("btn_MagSure").click();
+				// 判断提示框是否存在，输出提示信息
+				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
+				getElement("info_ok").click();
+			} else {
+				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
+				getElement("info_ok").click();
+			}
+		} else {
+			Log.logInfo("九卅微信不开放！");
 		}
 	}
 
@@ -271,8 +255,8 @@ public class DepositPage extends Page {
 			// 选择支付宝转银行卡
 			getElement("aliBank").click();
 			Log.logInfo("选择转到银行卡");
-			List<WebElement> banks=geSelecttAllOptions(getElement("ddlBanks"));
-			if(banks.size()>0){
+			List<WebElement> banks = geSelecttAllOptions(getElement("ddlBanks"));
+			if (banks.size() > 0) {
 				selectByIndex(getElement("ddlBanks"), 1);
 				// 输入金额
 				String txtMoneyapiBank = GetMinMoney(getElement("txtMoneyapiBank"), "placeholder");
@@ -288,10 +272,10 @@ public class DepositPage extends Page {
 					Log.logInfo("提示【" + getElement("info_text").getText() + "】");
 					getElement("info_ok").click();
 				}
-			}else {
+			} else {
 				Log.logInfo("没有可以选择的银行！");
 			}
-		
+
 		} else {
 			Log.logInfo("支付宝转到银行卡不开放！");
 		}
@@ -304,41 +288,33 @@ public class DepositPage extends Page {
 	 * @throws InterruptedException
 	 */
 	public void onlineFastPay() throws InterruptedException {
-		if (isExist(getElementNoWait("OnlineFastPay"))) {
-			// 进入快捷支付
-			Log.logInfo("---------快捷支付-------------");
-			getElement("OnlineFastPay").click();
-			// 输入金额
-			String fastPayMoney = GetMinMoney(getElement("txtMoney"), "placeholder");
-			getElement("txtMoney").sendKeys(fastPayMoney);
-			Log.logInfo("输入金额：" + fastPayMoney);
-			// 点击确认送出
-			getElement("btn_onlineFastSubmit").click();
-			Log.logInfo("点击确认送出");
-			if (isExist(getElement("iptNext"))) {
-				Thread.sleep(3000);
-				Log.logInfo("等待3s");
-				// 得到所有开放银行
-				List<WebElement> banks = getElements("selectBank");
-				int index = RandomUtil.getRandom(0, banks.size());
-				Log.logInfo("选择银行：" + banks.get(index).getText());
-				// 随机选择银行
-				banks.get(index).click();
-				Log.logInfo("点击下一步");
-				getElement("iptNext").click();
-				if (isExist(getElement("info_ok"))) {
-					// 判断提示框是否存在，输出提示信息
-					Log.logInfo("提示【" + getElement("info_text").getText() + "】");
-					getElement("info_ok").click();
-				}
+		// 输入金额
+		String fastPayMoney = GetMinMoney(getElement("txtMoney"), "placeholder");
+		getElement("txtMoney").sendKeys(fastPayMoney);
+		Log.logInfo("输入金额：" + fastPayMoney);
+		// 点击确认送出
+		getElement("btn_onlineFastSubmit").click();
+		Log.logInfo("点击确认送出");
+		if (!isExist("InfoLoading", "info_ok")) {
+			// 获取所有开放银行
+			List<WebElement> banks = getElements("selectBank");
+			int index = RandomUtil.getRandom(0, banks.size());
+			Log.logInfo("选择银行：" + banks.get(index).getText());
+			// 随机选择银行
+			banks.get(index).click();
+			Log.logInfo("点击下一步");
+			getElement("iptNext").click();
+			if (!isExist("InfoLoading", "info_ok")) {
+				Log.logInfo("成功跳转到第三方支付: " + driver.getCurrentUrl());
 			} else {
 				// 判断提示框是否存在，输出提示信息
-				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
+				Log.logInfo("快捷支付下一步提交失败！提示【" + getElement("info_text").getText() + "】");
 				getElement("info_ok").click();
 			}
-
 		} else {
-			Log.logInfo(getElementNoWait("TextPosition").getText() + "维护中！");
+			// 判断提示框是否存在，输出提示信息
+			Log.logInfo("快捷支付确认送出失败！提示【" + getElement("info_text").getText() + "】");
+			getElement("info_ok").click();
 		}
 	}
 
@@ -346,7 +322,6 @@ public class DepositPage extends Page {
 	 * 扫码支付之银联扫码
 	 */
 	public void quickPassDepositUnion() {
-		Log.logInfo("---------银联扫码-----------");
 		if (isExist(getElementNoWait("QuickPassDeposit"))) {
 			getElement("QuickPassDeposit").click();
 			if (isExist(getElement("divUnion"))) {
@@ -385,7 +360,6 @@ public class DepositPage extends Page {
 	 * 扫码支付之百度钱包
 	 */
 	public void quickPassDepositBaidu() {
-		Log.logInfo("---------银联扫码-----------");
 		if (isExist(getElementNoWait("QuickPassDeposit"))) {
 			getElement("QuickPassDeposit").click();
 			if (isExist(getElementNoWait("divBaidu"))) {
@@ -427,7 +401,6 @@ public class DepositPage extends Page {
 	 * 扫码支付之京东钱包
 	 */
 	public void quickPassDepositJD() {
-		Log.logInfo("---------银联扫码-----------");
 		if (isExist(getElementNoWait("QuickPassDeposit"))) {
 			getElement("QuickPassDeposit").click();
 			if (isExist(getElementNoWait("divJd"))) {
@@ -470,39 +443,31 @@ public class DepositPage extends Page {
 	 * @throws InterruptedException
 	 */
 	public void cardPay() throws InterruptedException {
-		Log.logInfo("--------点卡支付-------");
-		if (isExist(getElementNoWait("CardPay"))) {
-			// 如果开放，就进入点卡支付
-			getElement("CardPay").click();
-			String cardNum = util.getRandomNum(16);
-			// 输入16位卡号
-			getElement("txtCardNum").sendKeys(cardNum);
-			Log.logInfo("输入卡号:" + cardNum);
-			String cardCode = util.getRandomNum(4);
-			// 输入4位cvv
-			getElement("txtCardCode").sendKeys(cardCode);
-			Log.logInfo("输入CVV:" + cardCode);
-			// 选择月份
-			selectByIndex(getElement("selExpMonth"), 0);
-			// 选择年份
-			selectByIndex(getElement("selExpYear"), 0);
-			// 输入金额cardPayMoney
-			String cardPayMoney = GetMinMoney(getElement("txtMoney"), "placeholder");
-			getElement("txtMoney").sendKeys(cardPayMoney);
-			Log.logInfo("输入金额：" + cardPayMoney);
-			// 点击确认送出
-			getElement("btnCardSubmit").click();
-			Log.logInfo("点击确认送出");
-			Thread.sleep(3000);
-			if (driver.getTitle().equals("支付结果")) {
-				Log.logInfo("点卡支付---提交成功");
-			} else {
-				// 判断提示框是否存在，输出提示信息
-				Log.logInfo("提示【" + getElement("info_text").getText() + "】");
-				getElement("info_ok").click();
-			}
+		String cardNum = util.getRandomNum(16);
+		// 输入16位卡号
+		getElement("txtCardNum").sendKeys(cardNum);
+		Log.logInfo("输入卡号:" + cardNum);
+		String cardCode = util.getRandomNum(4);
+		// 输入4位cvv
+		getElement("txtCardCode").sendKeys(cardCode);
+		Log.logInfo("输入CVV:" + cardCode);
+		// 选择月份
+		selectByIndex(getElement("selExpMonth"), 0);
+		// 选择年份
+		selectByIndex(getElement("selExpYear"), 0);
+		// 输入金额cardPayMoney
+		String cardPayMoney = GetMinMoney(getElement("txtMoney"), "placeholder");
+		getElement("txtMoney").sendKeys(cardPayMoney);
+		Log.logInfo("输入金额：" + cardPayMoney);
+		// 点击确认送出
+		getElement("btnCardSubmit").click();
+		Log.logInfo("点击确认送出");
+		if (isExist("InfoLoading", "info_ok")) {
+			// 判断提示框是否存在，输出提示信息
+			Log.logInfo("点卡支付---提交失败！提示【" + getElement("info_text").getText() + "】");
+			getElement("info_ok").click();
 		} else {
-			Log.logInfo("点卡支付不开放");
+			Log.logInfo("点卡支付---提交成功！跳转【" + driver.getCurrentUrl() + "】");
 		}
 
 	}
@@ -511,36 +476,38 @@ public class DepositPage extends Page {
 	 * 网络银行
 	 */
 	public void Czzq_1() {
-		Log.logInfo("-------网络银行--------");
-		if (isExist(getElementNoWait("Czzq_1"))) {
-			getElement("Czzq_1").click();
-			List<WebElement> banks=geSelecttAllOptions(getElement("ddlBanks"));
-			if(banks.size()>0){
-				//选择银行
+		    //获取所有可以选择的银行
+			List<WebElement> banks = geSelecttAllOptions(getElement("ddlBanks"));
+			if (banks.size() > 0) {
+				// 选择银行
 				selectByIndex(getElement("ddlBanks"), 1);
 				// 输入金额
 				String bankMoney = GetMinMoney(getElement("contentBody_txtMoney"), "placeholder");
 				getElement("contentBody_txtMoney").sendKeys(bankMoney);
 				Log.logInfo("输入金额：" + bankMoney);
-				//点击确认送出
+				// 点击确认送出
 				getElement("btnField_1").click();
 				Log.logInfo("点击确认送出");
-				if(isExist(getElementNoWait("btn_MagSureNew"))){
+				if (isExist("InfoLoading", "btn_MagSureNew")) 
+				{
+					//弹出框点击确认
 					getElement("btn_MagSureNew").click();
-					Log.logInfo(getElement("info_text").getText());
-					getElement("info_ok").click();
-				}else {
+					Log.logInfo("弹出框点击确认");
+					if (isExist("InfoLoading", "info_ok")) {
+						Log.logInfo("网络银行确认送出提交成功！提示【"+getElement("info_text").getText()+"】");
+						getElement("info_ok").click();
+					}else {
+						Log.logInfo("网络银行提交失败！");
+					}
+					
+				} else {
 					// 判断提示框是否存在，输出提示信息
 					Log.logInfo("提示【" + getElement("info_text").getText() + "】");
 					getElement("info_ok").click();
 				}
-			}else {
-				Log.logInfo("没有开放银行");
+			} else {
+				Log.logInfo("没有开放银行！！");
 			}
-			
-		}else {
-			Log.logInfo("网络银行不开放");
-		}
 	}
 
 }

@@ -32,78 +32,63 @@ public class Deposit extends TestBase {
 			
 			WebDriver dDriver = getCurrentWindowHandle();
 			DepositPage dPage = new DepositPage(dDriver);
-			//dPage.onlineDeposit();
-			//dPage.qqWallet();
-			//dPage.onlineWeChat();
-			//dPage.weChatMan();
-			//dPage.alipayAuto();
-			//dPage.alipayMan();
-			 //dPage.aliBank();
-			//dPage.onlineFastPay();
-			//dPage.quickPassDepositUnion();
-			//dPage.quickPassDepositBaidu();
-			//dPage.quickPassDepositJD();
-			 // dPage.cardPay();
-			dPage.Czzq_1();
-		/*int windowCount = driver.getWindowHandles().size();
+		    int windowCount = driver.getWindowHandles().size();
 			if (windowCount > 1) {
-				WebDriver dDriver = getCurrentWindowHandle();
-				DepositPage dPage = new DepositPage(dDriver);
 				Log.logInfo(dDriver.getTitle());
+				String depositUrl = driver.getCurrentUrl();
 				Assert.assertEquals(dDriver.getTitle(), "会员中心--存款专区");
-
 				int despositTypeCount = dPage.getElements("IntoDeposit").size();
-				
 				for (int i = 0; i < despositTypeCount; i++) {
 					String text = dPage.getElements("TextPosition").get(i).getText();
 					if(text.equals("敬请期待"))
 						continue;
 					if (!dPage.getElementsNoWait("TopMaintain").get(i).isDisplayed()) {
+					    if(!text.contains("网络银行")) continue;
 						dPage.getElements("IntoDeposit").get(i).click();
+						Log.logInfo("--------------进入"+text+"-------------------");
 						String url = dDriver.getCurrentUrl();
 						if (url.contains("OnlineDeposit-cn.aspx")) {
 							// 执行在线网银存款操作
-							dPage.onlineDeposit();
+							//dPage.onlineDeposit();
 						}
 						if (url.contains("QQWallet.aspx")) {
 							// 执行qq扫码存款操作
-							dPage.qqWallet();
+							//dPage.qqWallet();
 						}
 						if (url.contains("WeChat_new.aspx")) {
 							// 执行微信存款操作
-							dPage.weChat();
+							//dPage.weChat();
 						}
 						if (url.contains("Alipay.aspx")) {
 							// 执行支付宝存款操作
-							dPage.alipay();
+							//dPage.alipay();
 						}
 						if (url.contains("OnlineFastPay.aspx")) {
 							// 执行快捷支付存款操作
-							dPage.onlineFastPay();
+							//dPage.onlineFastPay();
 						}
 						if (url.contains("QuickPassDeposit.aspx")) {
 							// 执行扫码支付存款操作
-							dPage.quickPassDeposit();
+							//dPage.quickPassDeposit();
 						}
 						if (url.contains("CardPay.aspx")) {
 							// 执行点卡支付存款操作
-							dPage.cardPay();
+							//dPage.cardPay();
 						}
 						if (url.contains("Czzq_1.aspx")) {
 							// 执行网络银行存款操作
-							dPage.cardPay();
+							dPage.Czzq_1();
 						}
-						//driver = getCurrentWindowHandle();
-						//hp.setDriver(driver);
-						//hp.getElement("aKscz").click();
+						
+						goTo(depositUrl);
 					} else {
-						Log.logInfo(text + "维护中");
+						Log.logInfo(text + "维护中！！！");
 					}
 				}
 			} else {
 				Log.logInfo(hp.getElement("info_tips").getText());
 			}
-			*/
+			
 		}
 	}
 }

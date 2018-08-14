@@ -90,6 +90,12 @@ public class TestBase {
 	@AfterClass
 	public void closeDriver() {
 		if (driver != null) {
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			//driver.close();
 			//driver.quit();
 		}
@@ -98,7 +104,7 @@ public class TestBase {
 	public void goTo(String url) {
 		driver.get(url);
 		if (Config.browser.equals("chrome")) {
-			Util.sleep(1);
+			Util.sleep(1.0);
 		}
 	}
 	

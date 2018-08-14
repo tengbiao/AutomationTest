@@ -2,81 +2,81 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[2018-08-03 18:24:19 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx]]>
+      <![CDATA[2018-08-14 16:43:31 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:19 : 2.输入账号：TB1234,密码：dd1234]]>
+      <![CDATA[2018-08-14 16:43:32 : 2.输入账号：TB1234,密码：dd1234]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:20 : 3.点击登入]]>
+      <![CDATA[2018-08-14 16:43:32 : 3.点击登入]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:22 : TB1234登录成功]]>
+      <![CDATA[2018-08-14 16:43:34 : TB1234登录成功]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:22 : 点击提款专区]]>
+      <![CDATA[2018-08-14 16:43:34 : 点击提款专区]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:24 : 会员中心--提款专区]]>
+      <![CDATA[2018-08-14 16:43:39 : 会员中心--提款专区]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:24 : 选择【银行卡号】提款]]>
+      <![CDATA[2018-08-14 16:43:39 : -------------进入【Astropay点卡】提款---------]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:24 : 银行卡尾号为【2338】]]>
+      <![CDATA[2018-08-14 16:43:40 : 输入提款金额：【1】]]>
     </line>
     <line>
-      <![CDATA[2018-08-03 18:24:25 : 1]]>
+      <![CDATA[2018-08-14 16:43:40 : 点击确认送出]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17121" started-at="2018-08-03T10:24:08Z" finished-at="2018-08-03T10:24:25Z">
+  <suite name="Default suite" duration-ms="32881" started-at="2018-08-14T08:43:12Z" finished-at="2018-08-14T08:43:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17121" started-at="2018-08-03T10:24:08Z" finished-at="2018-08-03T10:24:25Z">
+    <test name="Default test" duration-ms="32881" started-at="2018-08-14T08:43:12Z" finished-at="2018-08-14T08:43:45Z">
       <class name="com.test.testcases.Withdraw">
-        <test-method status="PASS" signature="initialDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="initialDriver" is-config="true" duration-ms="6357" started-at="2018-08-03T18:24:08Z" finished-at="2018-08-03T18:24:14Z">
+        <test-method status="PASS" signature="initialDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="initialDriver" is-config="true" duration-ms="6939" started-at="2018-08-14T16:43:12Z" finished-at="2018-08-14T16:43:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialDriver -->
-        <test-method status="PASS" signature="testsubmitUnionCard(java.util.Map)[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="testsubmitUnionCard" duration-ms="10683" started-at="2018-08-03T18:24:14Z" data-provider="providerMethod" finished-at="2018-08-03T18:24:25Z">
+        <test-method status="PASS" signature="testsubmitUnionCard(java.util.Map)[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="testsubmitUnionCard" duration-ms="20872" started-at="2018-08-14T16:43:19Z" data-provider="providerMethod" finished-at="2018-08-14T16:43:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSort/index.aspx, money=10, url_formal=https://ts.kaz11.net/SiteSort/index.aspx, url=http://119.81.201.156:6026/SiteSort/index.aspx, url_test=http://119.81.201.156:6026/SiteSort/index.aspx}]]>
+                <![CDATA[{username_pre=F663, username_test=TB1234, password=dd1234, url_pre=http://161.202.204.53:6026/SiteSort/index.aspx, money=10, url_formal=https://ts.kaz11.net/SiteSort/index.aspx, jymm=dd4321, url=http://119.81.201.156:6026/SiteSort/index.aspx, url_test=http://119.81.201.156:6026/SiteSort/index.aspx}]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[2018-08-03 18:24:19 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx]]>
+              <![CDATA[2018-08-14 16:43:31 : 1.打开测试地址：http://119.81.201.156:6026/SiteSort/index.aspx]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:19 : 2.输入账号：TB1234,密码：dd1234]]>
+              <![CDATA[2018-08-14 16:43:32 : 2.输入账号：TB1234,密码：dd1234]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:20 : 3.点击登入]]>
+              <![CDATA[2018-08-14 16:43:32 : 3.点击登入]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:22 : TB1234登录成功]]>
+              <![CDATA[2018-08-14 16:43:34 : TB1234登录成功]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:22 : 点击提款专区]]>
+              <![CDATA[2018-08-14 16:43:34 : 点击提款专区]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:24 : 会员中心--提款专区]]>
+              <![CDATA[2018-08-14 16:43:39 : 会员中心--提款专区]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:24 : 选择【银行卡号】提款]]>
+              <![CDATA[2018-08-14 16:43:39 : -------------进入【Astropay点卡】提款---------]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:24 : 银行卡尾号为【2338】]]>
+              <![CDATA[2018-08-14 16:43:40 : 输入提款金额：【1】]]>
             </line>
             <line>
-              <![CDATA[2018-08-03 18:24:25 : 1]]>
+              <![CDATA[2018-08-14 16:43:40 : 点击确认送出]]>
             </line>
           </reporter-output>
         </test-method> <!-- testsubmitUnionCard -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="closeDriver" is-config="true" duration-ms="1" started-at="2018-08-03T18:24:25Z" finished-at="2018-08-03T18:24:25Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.test.testcases.Withdraw@467aecef]" name="closeDriver" is-config="true" duration-ms="5002" started-at="2018-08-14T16:43:40Z" finished-at="2018-08-14T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

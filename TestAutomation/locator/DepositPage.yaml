@@ -160,3 +160,6 @@ IntoDeposit:
 TextPosition:
   type:className
   value:text_position
+InfoLoading:
+  type:xpath
+  value:"//*[@type='loading']"

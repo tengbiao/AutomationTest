@@ -1,13 +1,13 @@
 package com.test.util;
 
 public class Util {
-	
-	public static void sleep(int secs){
+
+	public static void sleep(Double secs) {
 		try {
-			Thread.sleep(secs*1000);
-		} catch (InterruptedException e) {			
+			int sms = (int) (secs * 1000);
+			Thread.sleep(sms);
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-	
 }

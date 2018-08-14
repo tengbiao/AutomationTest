@@ -13,7 +13,7 @@
     <parameter name="nodeUrl" value="http://192.168.40.67:5555"/>  
     <parameter name="webSite" value="http://www.baidu.com"/>  
     <classes>  
-        <class name="driver.GridParallelTests"></class>  
+        <class name=" "></class>  
     </classes>  
 </test>  
   

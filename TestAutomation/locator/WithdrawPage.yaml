@@ -4,6 +4,30 @@ UnionCard:
 addBank:
   type:xpath
   value:"//*[@class='increase_t']"
+txtRemittanceAccount:
+  type:id
+  value:contentBody_txtRemittanceAccount
+ddlBankCode:
+  type:id
+  value:ddlBankCode
+ddlCity:
+  type:id
+  value:contentBody_ddlCity
+ddlCityArea:
+  type:id
+  value:ddlCityArea
+btn_SendPhoneCode:
+  type:id
+  value:btn_SendPhoneCode
+txtAddBankCardCode:
+  type:id
+  value:txtAddBankCardCode
+btn_CheckCode:
+  type:id
+  value:btn_CheckCode
+addBank_sbumit:
+  type:id
+  value:addBank
 card:
   type:xpath
   value:"//*[@class='bkcard_t']"
@@ -34,3 +58,9 @@ info_ok:
 info_text:
   type:xpath
   value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"
+confirm_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1']"
+InfoLoading:
+  type:xpath
+  value:"//*[@type='loading']"

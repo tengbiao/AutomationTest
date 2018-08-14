@@ -137,8 +137,10 @@ public class MypursePage extends Page {
 				getElement("确认送出").click();
 				// Log.logInfo("点击确认送出");
 				getElement("confirm_ok").click(); // 提示框点击确定
+				boolean isReloadPage = false;
 				if (getElement("info_text").getText().equals("平台转帐成功！")) {
 					Log.logInfo("【" + outOPtionText + "】转到【" + inOptionText + "】金额【" + transferMoney + "】点成功！");
+					isReloadPage= true;
 				} else {
 					Log.logError("【" + outOPtionText + "】转到【" + inOptionText + "】金额【" + transferMoney + "】点失败！提示："
 							+ getElement("info_text").getText());
@@ -146,7 +148,7 @@ public class MypursePage extends Page {
 				// 互转等待遮罩层，并且刷新页面
 				getElement("info_ok").click();
 
-				if (waitMaskHide("mask")) {
+				if (isReloadPage && waitMaskHide("mask")) {
 					getPlatformOption("outSelect", "outAccountOption").get(i).click();
 				}
 
