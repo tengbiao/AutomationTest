@@ -1,9 +1,6 @@
 package com.test.page;
 
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
-
 import com.test.base.Page;
 import com.test.util.Log;
 import com.test.util.RandomUtil;

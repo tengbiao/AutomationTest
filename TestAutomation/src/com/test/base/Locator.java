@@ -24,14 +24,14 @@ import com.test.bean.Config;
 import com.test.util.Log;
 
 public class Locator {
-
 	private String yamlFile;
-
+	private String packageName;
 	protected WebDriver driver;
 
 	private Map<String, Map<String, String>> extendLocator;
 
-	public void setYamlFile(String yamlFile) {
+	public void setYamlFile(String packageName, String yamlFile) {
+		this.packageName = packageName;
 		this.yamlFile = yamlFile;
 	}
 
@@ -46,7 +46,8 @@ public class Locator {
 	 */
 	@SuppressWarnings("unchecked")
 	protected void getYamlFile() {
-		File f = new File("locator/" + yamlFile + ".yaml");
+		boolean isMobile = packageName.contains("mobile");
+		File f = new File("locator/" + (isMobile ? "mobile/" : "pc/") + yamlFile + ".yaml");
 		try {
 			ml = Yaml.loadType(new FileInputStream(f.getAbsolutePath()), HashMap.class);
 		} catch (FileNotFoundException e) {
@@ -290,7 +291,7 @@ public class Locator {
 	public static void main(String[] args) {
 		SeleniumDriver selenium = new SeleniumDriver();
 		Locator d = new Locator(selenium.getDriver());
-		d.setYamlFile("FirstPage");
+		// d.setYamlFile("FirstPage");
 		d.getYamlFile();
 		d.getElement("");
 	}

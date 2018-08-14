@@ -1,8 +1,6 @@
 package com.test.page;
 
 import java.util.List;
-import java.util.UUID;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -64,6 +62,7 @@ public class MypursePage extends Page {
 		
 	}
 
+	@SuppressWarnings("unused")
 	private void clickPlatformSelectHide(String key) {
 		getElement(key).click();
 		waitElementToBeNonDisplayed(

@@ -1,20 +1,12 @@
 package com.test.base;
 
-import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.io.FileUtils;
 import org.dom4j.Element;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +16,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
-
 import com.test.bean.Config;
 import com.test.bean.Global;
 import com.test.util.Log;
@@ -41,7 +32,8 @@ public class TestBase {
 
 	private void initialPx() {
 		if (px == null) {
-			px = new ParseXml("test-data/" + this.getClass().getSimpleName() + ".xml");
+			boolean isMobile = this.getClass().getPackage().getName().contains("mobile");
+			px = new ParseXml("test-data/" + (isMobile ? "mobile/" : "pc/") + this.getClass().getSimpleName() + ".xml");
 		}
 	}
 
@@ -96,8 +88,8 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//driver.close();
-			//driver.quit();
+			// driver.close();
+			// driver.quit();
 		}
 	}
 
@@ -107,11 +99,12 @@ public class TestBase {
 			Util.sleep(1.0);
 		}
 	}
-	
-    /**
-     * 获得当前窗口句柄
-     * @return
-     */
+
+	/**
+	 * 获得当前窗口句柄
+	 * 
+	 * @return
+	 */
 	public WebDriver getCurrentWindowHandle() {
 		String currentWindow = driver.getWindowHandle(); // 获取当前窗口的句柄
 		Set<String> handles = driver.getWindowHandles(); // 获取所有窗口的句柄
@@ -124,9 +117,10 @@ public class TestBase {
 		}
 		return driver;
 	}
+
 	/**
 	 * 判断文本是不是和需求要求的文本一致
-	 * **/
+	 **/
 	public void isTextCorrect(String actual, String expected) {
 		try {
 			Assert.assertEquals(actual, expected);
@@ -137,40 +131,39 @@ public class TestBase {
 		}
 		Log.logInfo("找到了期望的文字: [" + expected + "]");
 	}
-	
+
 	// webdriver中可以设置很多的超时时间
-		/** implicitlyWait。识别对象时的超时时间。过了这个时间如果对象还没找到的话就会抛出NoSuchElement异常 */
-		public void implicitlyWait(int timeOut) {
-			driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
-		}
-		
-		public void intelligentWait(int timeOut, final WebElement element){
-			try {
-				(new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
-					public Boolean apply(WebDriver driver) {
-						return element.isDisplayed();
-					}
-				});
-			} catch (TimeoutException e) {
-				Assert.fail("超时!! " + timeOut + " 秒之后还没找到元素 [" + element + "]",e);
-			}
-		}
+	/** implicitlyWait。识别对象时的超时时间。过了这个时间如果对象还没找到的话就会抛出NoSuchElement异常 */
+	public void implicitlyWait(int timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	}
 
-		/**
-		 * pageLoadTimeout。页面加载时的超时时间。因为webdriver会等页面加载完毕在进行后面的操作，
-		 * 所以如果页面在这个超时时间内没有加载完成，那么webdriver就会抛出异常
-		 */
-
-		public void waitForPageLoading(int pageLoadTime) {
-			driver.manage().timeouts().pageLoadTimeout(pageLoadTime, TimeUnit.SECONDS);
+	public void intelligentWait(int timeOut, final WebElement element) {
+		try {
+			(new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
+				public Boolean apply(WebDriver driver) {
+					return element.isDisplayed();
+				}
+			});
+		} catch (TimeoutException e) {
+			Assert.fail("超时!! " + timeOut + " 秒之后还没找到元素 [" + element + "]", e);
 		}
-		
-		/**
-		 * 获得页面的标题
-		 * */
-		public String getTitle() {
-			return driver.getTitle();
-		}
+	}
 
-		
+	/**
+	 * pageLoadTimeout。页面加载时的超时时间。因为webdriver会等页面加载完毕在进行后面的操作，
+	 * 所以如果页面在这个超时时间内没有加载完成，那么webdriver就会抛出异常
+	 */
+
+	public void waitForPageLoading(int pageLoadTime) {
+		driver.manage().timeouts().pageLoadTimeout(pageLoadTime, TimeUnit.SECONDS);
+	}
+
+	/**
+	 * 获得页面的标题
+	 */
+	public String getTitle() {
+		return driver.getTitle();
+	}
+
 }

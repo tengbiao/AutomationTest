@@ -1,20 +1,14 @@
 package com.test.testcases;
 
 import java.util.Map;
-import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.server.handler.GetElementDisplayed;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.test.base.TestBase;
 import com.test.page.DepositPage;
 import com.test.page.HomePage;
 import com.test.util.Assertion;
 import com.test.util.Log;
-
-import bsh.Variable;
 
 public class Deposit extends TestBase {
 	

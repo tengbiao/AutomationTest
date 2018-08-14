@@ -47,6 +47,7 @@ public class TimeString {
 		return year+month+day+hour+minute+second+millisecond;
 	}	
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		TimeString ts = new TimeString();
 		Log.logInfo(ts.getTime());

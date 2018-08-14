@@ -1,0 +1,69 @@
+帐号:
+  type:id
+  value:txtUser
+密码:
+  type:id
+  value:txtPassword
+登入按钮:
+  type:className
+  value:btn_login
+登出按钮:
+  type:xpath
+  value:"//*[@id='divLogined']/div[4]/a[6]"   
+九卅体育:
+  type:className
+  value:divSport
+登录框:
+  type:id
+  value:divLogined
+免费注册:
+  type:className
+  value:btn_freeRegister
+转:
+  type:id
+  value:aMypurse
+aKscz:
+  type:id
+  value:aKscz
+aKscz2:
+  type:id
+  value:aKscz2
+aHyzx:
+  type:id
+  value:aHyzx
+account:
+  type:id
+  value:account
+aBall:
+  type:id
+  value:aBall
+cmd:
+  type:id
+  value:cmd
+iframe:
+  type:xpath
+  value:"//iframe[1]"
+txtMoney:
+  type:id
+  value:txtMoney
+sportBBIN:
+  type:id
+  value:sportBBIN
+sportAG:
+  type:id
+  value:sportAG
+btnSendOK:
+  type:xpath
+  value:"//*[@class='btn_style btn_ingame']"
+confirm_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-confirm')]//a[@class='layui-layer-btn1']"
+info_ok:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//a[@class='layui-layer-btn0']"
+info_text:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-dialog-custom')]//div[@class='layui-layer-content']"
+info_tips:
+  type:xpath
+  value:"//*[contains(@class,'layui-layer-tips')]//div[@class='layui-layer-content']"

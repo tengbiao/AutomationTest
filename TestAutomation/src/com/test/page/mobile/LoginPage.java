@@ -1,12 +1,12 @@
-package com.test.page;
+package com.test.page.mobile;
 
 import org.openqa.selenium.WebDriver;
 import com.test.base.Page;
 import com.test.util.Log;
 
-public class HomePage extends Page {
+public class LoginPage extends Page {
 
-	public HomePage(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
 

@@ -1,12 +1,9 @@
 package com.test.testcases;
 
 import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
 import com.test.base.TestBase;
-import com.test.page.DepositPage;
 import com.test.page.HomePage;
 import com.test.page.WithdrawPage;
 import com.test.util.Assertion;

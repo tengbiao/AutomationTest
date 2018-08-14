@@ -1,10 +1,8 @@
 package com.test.base;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -14,9 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.openqa.selenium.*;
-
-import com.opera.core.systems.scope.protos.ExecProtos.ActionList.Action;
 import com.test.util.Log;
 
 import com.test.util.*;
@@ -25,7 +20,7 @@ public class Page extends Locator {
 
 	public Page(WebDriver driver) {
 		super(driver);
-		this.setYamlFile(this.getClass().getSimpleName());
+		this.setYamlFile(this.getClass().getPackage().getName(),this.getClass().getSimpleName());
 		this.getYamlFile();
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
